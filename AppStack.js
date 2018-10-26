@@ -13,8 +13,13 @@ import App from './app/index';
 import MyPage from './MyPage';
 import MyPage2 from './MyPage2';
 import WelcomePage from "./WelcomePage";
+import TestPage from "./TestPage";
 
 export default createStackNavigator({
+
+    TestPage: {
+        screen: TestPage
+    },
     WelcomePage: {
         screen: WelcomePage
     },
