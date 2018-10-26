@@ -16,6 +16,9 @@ import WelcomePage from "./WelcomePage";
 import TestPage from "./TestPage";
 
 export default createStackNavigator({
+    MyPage: {
+        screen: MyPage,
+    },
     MyPage2: {
         screen: MyPage2,
     },
@@ -29,9 +32,6 @@ export default createStackNavigator({
         screen: App,
     },
 
-    MyPage: {
-        screen: MyPage,
-    },
 
 
 }, {
