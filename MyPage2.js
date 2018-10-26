@@ -7,7 +7,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'; // 6.2.2
-import {TabNavigator, TabBarBottom} from 'react-navigation'; // 1.0.0-beta.27
+import {createTabNavigator, TabBarBottom} from 'react-navigation'; // 1.0.0-beta.27
 
 class HomeScreen extends React.Component {
     render() {
@@ -33,7 +33,7 @@ class SettingsScreen extends React.Component {
     }
 }
 
-export default TabNavigator(
+export default createTabNavigator(
     {
         Home: {screen: HomeScreen},
         Settings: {screen: SettingsScreen},
@@ -46,7 +46,7 @@ export default TabNavigator(
                 if (routeName === 'Home') {
                     iconName = `ios-information-circle${focused ? '' : '-outline'}`;
                 } else if (routeName === 'Settings') {
-                    iconName = `ios-options${focused ? '' : '-outline'}`;
+                    iconName = `ios-remove-circle${focused ? '' : '-outline'}`;
                 }
 
                 // You can return any component that you like here! We usually use an
